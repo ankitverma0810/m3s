@@ -1,0 +1,32 @@
+RewriteEngine on
+
+RewriteRule ^popular-search/([^/\.]+)/([^/\.]+)/([^/\.]+)/?$ search-listing.php?caturl=$1&stateurl=$2&name=$3 [L]
+RewriteRule ^searching/([^/\.]+)/?$ search-listing.php?caturl=$1 [L]
+RewriteRule ^searching/([^/\.]+)/([^/\.]+)/?$ search-listing.php?caturl=$1&ad_type=$2 [L]
+RewriteRule ^searching/([^/\.]+)/([^/\.]+)/page([^/\.]+)/?$ search-listing.php?caturl=$1&ad_type=$2&page=$3 [L]
+
+RewriteRule ^category/([^/\.]+)/([^/\.]+)/?$ search-listing.php?caturl=$1&subcaturl=$2 [L]
+RewriteRule ^category/([^/\.]+)/([^/\.]+)/([^/\.]+)/?$ search-listing.php?caturl=$1&subcaturl=$2&ad_type=$3 [L]
+RewriteRule ^category/([^/\.]+)/([^/\.]+)/([^/\.]+)/page([^/\.]+)/?$ search-listing.php?caturl=$1&subcaturl=$2&ad_type=$3&page=$4 [L]
+
+RewriteRule ^search/([^/\.]+)/([^/\.]+)/([^/\.]+)/?$ search-listing.php?caturl=$1&stateurl=$2&ad_type=$3 [L]
+RewriteRule ^search/([^/\.]+)/([^/\.]+)/([^/\.]+)/page([^/\.]+)/?$ search-listing.php?caturl=$1&stateurl=$2&ad_type=$3&page=$4 [L]
+
+RewriteRule ^search-keyword/([^/\.]+)/([^/\.]+)/([^/\.]+)/([^/\.]+)/?$ search-listing.php?caturl=$1&stateurl=$2&name=$3&ad_type=$4 [L]
+RewriteRule ^search-keyword/([^/\.]+)/([^/\.]+)/([^/\.]+)/([^/\.]+)/page([^/\.]+)/?$ search-listing.php?caturl=$1&stateurl=$2&name=$3&ad_type=$4&page=$5 [L]
+
+RewriteRule ^state/([^/\.]+)/?$ search-listing.php?stateurl=$1 [L]
+RewriteRule ^state/([^/\.]+)/([^/\.]+)/?$ search-listing.php?stateurl=$1&ad_type=$2 [L]
+RewriteRule ^state/([^/\.]+)/([^/\.]+)/page([^/\.]+)/?$ search-listing.php?stateurl=$1&ad_type=$2&page=$3 [L]
+
+RewriteRule ^searchingg/([^/\.]+)/([^/\.]+)/([^/\.]+)/([^/\.]+)/?$ search-listing.php?caturl=$1&subcaturl=$2&stateurl=$3&ad_type=$4 [L]
+RewriteRule ^searchingg/([^/\.]+)/([^/\.]+)/([^/\.]+)/([^/\.]+)/page([^/\.]+)/?$ search-listing.php?caturl=$1&subcaturl=$2&stateurl=$3&ad_type=$4&page=$5 [L]
+
+RewriteRule ^details/([^/\.]+)/([^/\.]+)/([^/\.]+)/?$ listing-detail.php?tablename=$1&adtitle=$2&adid=$3 [L]
+
+RewriteRule ^view/([^/\.]+)/([^/\.]+)/?$ ads-detail.php?tablename=$1&adid=$2 [L]
+RewriteRule ^edit/([^/\.]+)/([^/\.]+)/?$ edit-free-classified-ads.php?tablename=$1&edit_adid=$2 [L]
+RewriteRule ^delete/([^/\.]+)/([^/\.]+)/?$ delete-free-classified-ads.php?tablename=$1&delete_adid=$2 [L]
+
+RewriteRule ^reportad/([^/\.]+)/([^/\.]+)/?$ report-ad.php?tablename=$1&repadid=$2 [L]
+

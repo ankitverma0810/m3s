@@ -1,0 +1,43 @@
+## This is an example .htaccess-file
+## To get everything automatically parsed, the following line is needed
+#set link auto on
+
+##From now on, every RewriteRule gets recognised.
+RewriteEngine on
+
+RewriteRule ^popular-search/(.+?)\/([\w]+)\/([\w]+)\		?caturl=$1&stateurl=$2&name=$3
+RewriteRule ^searching/(.+?)\					?caturl=$1
+RewriteRule ^searching/(.+?)\/([\w]+)\		?caturl=$1&ad_type=$2
+RewriteRule ^searching/(.+?)\/([\w]+)\/page([\w]+)\		?caturl=$1&ad_type=$2&page=$3
+
+RewriteRule ^category/(.+?)\/([\w]+)\		?caturl=$1&subcaturl=$2
+RewriteRule ^category/(.+?)\/([\w]+)\/([\w]+)\		?caturl=$1&subcaturl=$2&ad_type=$3
+RewriteRule ^category/(.+?)\/([\w]+)\/([\w]+)\/page([\w]+)\		?caturl=$1&subcaturl=$2&ad_type=$3&page=$4
+
+RewriteRule ^search/(.+?)\/([\w]+)\/([\w]+)\		?caturl=$1&stateurl=$2&ad_type=$3
+RewriteRule ^search/(.+?)\/([\w]+)\/([\w]+)\/page([\w]+)\		?caturl=$1&stateurl=$2&ad_type=$3&page=$4
+
+RewriteRule ^search-keyword/(.+?)\/([\w]+)\/([\w]+)\/([\w]+)\		?caturl=$1&stateurl=$2&name=$3&ad_type=$4
+RewriteRule ^search-keyword/(.+?)\/([\w]+)\/([\w]+)\/([\w]+)\/page([\w]+)\		?caturl=$1&stateurl=$2&name=$3&ad_type=$4&page=$5
+
+RewriteRule ^state/(.+?)\					?stateurl=$1
+RewriteRule ^state/(.+?)\/([\w]+)\		?stateurl=$1&ad_type=$2
+RewriteRule ^state/(.+?)\/([\w]+)\/page([\w]+)\		?stateurl=$1&ad_type=$2&page=$3
+
+RewriteRule ^searchingg/(.+?)\/([\w]+)\/([\w]+)\/([\w]+)\		?caturl=$1&subcaturl=$2&stateurl=$3&ad_type=$4
+RewriteRule ^searchingg/(.+?)\/([\w]+)\/([\w]+)\/([\w]+)\/page([\w]+)\		?caturl=$1&subcaturl=$2&stateurl=$3&ad_type=$4&page=$5
+
+RewriteRule ^details/(.+?)\/([\w]+)\/([\w]+)\		?tablename=$1&adtitle=$2&adid=$3
+
+RewriteRule ^view/(.+?)\/([\w]+)\		?tablename=$1&adid=$2
+RewriteRule ^edit/(.+?)\/([\w]+)\		?tablename=$1&edit_adid=$2
+RewriteRule ^delete/(.+?)\/([\w]+)\		?tablename=$1&delete_adid=$2
+
+RewriteRule ^reportad/(.+?)\/([\w]+)\		?tablename=$1&repadid=$2
+
+
+
+
+##You can also change the text before the real link by the following line
+#set link start http://www.m3s.in/
+##set link start http://localhost/m3h/
